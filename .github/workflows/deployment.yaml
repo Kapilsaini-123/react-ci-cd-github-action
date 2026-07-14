@@ -8,5 +8,5 @@ jobs:
         run: |
 
           echo "cloning repo"
-          echo "${{ to Json(github)}}"
-          git clone https://github.com/${{ github.repository }}.git
+          echo "${{toJson(github)}}"
+          git clone https://github.com/${{github.repository}}.git

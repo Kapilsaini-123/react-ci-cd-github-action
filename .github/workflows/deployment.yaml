@@ -23,6 +23,7 @@ jobs:
         run: npm run test
    
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: get code
@@ -49,6 +50,7 @@ jobs:
           path: dist
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: get code

@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 20
       - name: chache Dependencies
-        uses: actions/chache@v4
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
